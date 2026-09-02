@@ -35,6 +35,7 @@ public class SecurityConfig {
                         .pathMatchers(HttpMethod.GET, "/api/v1/onboarding/applications/client/**").permitAll()
                         .pathMatchers(HttpMethod.GET, "/api/v1/onboarding/schemas").permitAll()
                         .pathMatchers(HttpMethod.POST, "/api/v1/onboarding/organizations").permitAll()
+                        .pathMatchers(HttpMethod.POST, "/api/v1/policy/evaluate").permitAll()
                         .pathMatchers("/api/v1/organization/**").hasRole("ORGANISATION_ADMIN")
                         .anyExchange().authenticated()
                 )
